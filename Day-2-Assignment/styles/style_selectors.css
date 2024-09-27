@@ -1,0 +1,26 @@
+p{
+    color: red;
+}
+p, div{
+    /* color: blue; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+#mydiv > p.mainClass{
+    font-style: italic;
+}
+div p{
+    font-weight: 900;
+}
+input[type="text"].myClass{
+    border-color:red ;
+}
+div ~ span{
+    color: blueviolet;
+}
+
+p.myClass{
+    color: aqua;
+}
+div#mydiv{
+    color: green;
+}

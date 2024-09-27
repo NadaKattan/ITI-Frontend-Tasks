@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-5</title>
+</head>
+<body>
+    <button id="myButton" onclick="clicked()" onmouseout="clickMe()"> click me</button>
+    <button id="alertButton" class="Btn" onclick="BtnClicked()" onmouseout="clickMe()"> alert</button>
+    <hr>
+    <div id="colorDiv" onmouseenter="changeColor() " onmouseleave="returnColor()">colorDiv</div>
+    <hr>
+    <form action="">
+        <input type="text" id="inputField" oninput="displayOnDiv(event)" onkeydown="consolePress()">
+    </form>
+    <div id="displayDiv"></div>
+    <hr>
+    <a href="https://identity.iti.gov.eg/account/login" id="myLink" onclick="alert('it\'s an alert');return false;">myLink</a>
+    <a href="https://identity.iti.gov.eg/account/login" onclick="prevent(event)"">myLink</a>
+    <hr>
+    <div id="mouseDiv" style="background-color: bisque; width: 100px; height: 100px;" onmousemove="displayCoordinate(event)"></div>
+    <hr>
+    <button id="toggleButton" onclick="toggleVisible()">ToggleButton</button>
+    <div id="toggleDiv" style="background-color: bisque; width: 100px; height: 100px;"></div>
+    <hr>
+    <span id="counter"></span>
+    <button id="incrementButton" onclick="incrementcntr()">incrementButton</button>
+    <script src="script.js"></script>
+</body>
+</html>

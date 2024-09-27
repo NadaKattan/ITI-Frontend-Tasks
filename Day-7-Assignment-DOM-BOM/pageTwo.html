@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Slider</title>
+    <style>
+      .slider {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .slider img {
+        width: 100%;
+        display: none;
+      }
+      img.displaySlide {
+        display: block;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- <div class="slider">
+      <div class="slides">
+        <img class="slide" src="image-1.jpg" alt="Image 1" />
+
+        <img class="slide" src="image-2.jpg" alt="Image 2" />
+        <img class="slide" src="image-3.jpg" alt="Image 3" />
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div> -->
+
+    <script>
+      const slides = document.querySelectorAll(".slides img");
+      let slideIndex = 0;
+      let intervalId = null;
+      document.addEventListener("DOMContentLoaded", initializeSlider);
+      function initializeSlider() {
+        if (slides.length > 0) {
+          slides[slideIndex].classList.add("displaySlide");
+          intervalId = setInterval(nextSlide, 4000);
+        }
+      }
+      function showSlide(index) {
+        if(index>=slides.length){
+            slideIndex=0;
+        }else if(index < 0){
+            slideIndex=slides.length-1;
+        }
+        slides.forEach(slide=>slide.classList.remove("displaySlide"));
+        slides[slideIndex].classList.add("displaySlide");
+      }
+      function prevSlide() {
+        clearInterval(intervalId);
+        slideIndex--;
+        showSlide(slideIndex);
+      }
+      function nextSlide() {
+        // clearInterval(intervalId);
+        slideIndex++;
+        showSlide(slideIndex);
+      }
+    </script>
+  </body>
+</html>

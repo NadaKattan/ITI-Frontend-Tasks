@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    background-color: black;
+    color: white;
+    border:px solid red;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+}
+.menu ul li{
+    list-style-type: none;
+    padding: 20px;
+}
+.menu ul li:hover{
+    background-color: red;
+}
